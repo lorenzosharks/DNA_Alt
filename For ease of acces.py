@@ -72,11 +72,7 @@ while i<int(length):
     elif aa_strand[i]=="c" or aa_strand[i]=="V":
         result_strand.append("Val")
 
-    else:
-        
-    i=i+1
-    
-        
+    i=i+1   
 
 if error==False:
     better_strand="".join(result_strand)
