@@ -1,3 +1,4 @@
+standard_input="YOLOAUGFFFUGAUAAFFGG"
 import sys
 
 #Function
@@ -22,10 +23,7 @@ mRNA_mid=del_early(mRNA, mRNA_index)
 #Creating a list
 mRNA_list=mRNA_list_creation(mRNA_mid)
 
-ending_codon=["UGA", "UAG", "UAA"]
-
 #finding the ending codon
-
 ending_index = -1
 
 for i in range(len(mRNA_list)):
@@ -37,5 +35,5 @@ for i in range(len(mRNA_list)):
     if ending_index !=-1:
         break
 
-print(ending_index)
-print(mRNA_list[ending_index])
+final_list=mRNA_list[:ending_index+1]
+print(final_list)
