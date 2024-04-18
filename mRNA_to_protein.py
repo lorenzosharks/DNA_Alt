@@ -1,4 +1,4 @@
-standard_input="YOLOAUGAUGCGAUGCUAGCGUUAGCUAGCUGAUCGAUCGAGACUGAUAAFFGG"
+standard_input="YOLOAUGAUGacuagucgagguccgaucgugagucgaugagucgauCGAUGCuaGCGUUAGCUAGCUGAUCGAUCGAGACUGAUAAFFGG"
 import sys
 
 #Function
@@ -8,7 +8,9 @@ def del_early(string, index):
 def mRNA_list_creation(mid):
     return [mid[i:i+3] for i in range(0, len(mid), 3)]
 
-mRNA=input("Insert your mRNA strand (After splicing and whatnot):")
+mRNAv1=input("Insert your mRNA strand (After splicing and whatnot):")
+
+mRNA=mRNAv1.upper()
 
 #Finding the first start codon
 mRNA_index=mRNA.find("AUG")
@@ -35,7 +37,7 @@ for i in range(len(mRNA_list)):
     if ending_index !=-1:
         break
 
-final_list=mRNA_list[:ending_index+1]
+final_listv1=mRNA_list[:ending_index+1]
 
 
 phe=['UUU','UUC']
@@ -62,67 +64,86 @@ gly=['GGU','GGC','GGA','GGG']
 
 
 
-for i in range(len(final_list)):
+for i in range(len(final_listv1)):
     print(i+1)
-    if final_list[i] in phe:
-        final_list[i]="Phe"
+    if final_listv1[i] in phe:
+        final_listv1[i]="Phe"
    
-    elif final_list[i] in leu:
-        final_list[i]="Leu"
+    elif final_listv1[i] in leu:
+        final_listv1[i]="Leu"
    
-    elif final_list[i] in ile:
-        final_list[i]="Ile"
+    elif final_listv1[i] in ile:
+        final_listv1[i]="Ile"
    
-    elif final_list[i] in met:
-        final_list[i]="Met"
+    elif final_listv1[i] in met:
+        final_listv1[i]="Met"
    
-    elif final_list[i] in val:
-        final_list[i]="Val"
+    elif final_listv1[i] in val:
+        final_listv1[i]="Val"
    
-    elif final_list[i] in ser:
-        final_list[i]="Ser"
+    elif final_listv1[i] in ser:
+        final_listv1[i]="Ser"
    
-    elif final_list[i] in pro:
-        final_list[i]="pro"
+    elif final_listv1[i] in pro:
+        final_listv1[i]="Pro"
    
-    elif final_list[i] in thr:
-        final_list[i]="Thr"
+    elif final_listv1[i] in thr:
+        final_listv1[i]="Thr"
    
-    elif final_list[i] in ala:
-        final_list[i]="Ala"
+    elif final_listv1[i] in ala:
+        final_listv1[i]="Ala"
    
-    elif final_list[i] in tyr:
-        final_list[i]="Tyr"
+    elif final_listv1[i] in tyr:
+        final_listv1[i]="Tyr"
    
-    elif final_list[i] in stop:
-        final_list[i]="Stop"
+    elif final_listv1[i] in stop:
+        final_listv1[i]="Stop"
    
-    elif final_list[i] in his:
-        final_list[i]="His"
+    elif final_listv1[i] in his:
+        final_listv1[i]="His"
    
-    elif final_list[i] in gln:
-        final_list[i]="Gln"
+    elif final_listv1[i] in gln:
+        final_listv1[i]="Gln"
    
-    elif final_list[i] in asn:
-        final_list[i]="Asn"
+    elif final_listv1[i] in asn:
+        final_listv1[i]="Asn"
    
-    elif final_list[i] in lys:
-        final_list[i]="Lys"
+    elif final_listv1[i] in lys:
+        final_listv1[i]="Lys"
    
-    elif final_list[i] in asp:
-        final_list[i]="Asp"
+    elif final_listv1[i] in asp:
+        final_listv1[i]="Asp"
     
-    elif final_list[i] in glu:
-        final_list[i]="Glu"
+    elif final_listv1[i] in glu:
+        final_listv1[i]="Glu"
    
-    elif final_list[i] in cys:
-        final_list[i]="Cys"
+    elif final_listv1[i] in cys:
+        final_listv1[i]="Cys"
    
-    elif final_list[i] in arg:
-        final_list[i]="Arg"
+    elif final_listv1[i] in arg:
+        final_listv1[i]="Arg"
    
-    elif final_list[i] in gly:
-        final_list[i]="Gly"
+    elif final_listv1[i] in gly:
+        final_listv1[i]="Gly"
 
 
-print(final_list)
+reversed_final_list=list(reversed(final_listv1))
+
+first_index=reversed_final_list.index('Met')
+
+too_much_variables=reversed_final_list[:first_index + 1]
+
+actual_final_list=list(reversed(too_much_variables))
+
+stop_index=actual_final_list.index('Stop')
+
+primary_structure=actual_final_list[:stop_index]
+
+
+#debugging prints
+print(reversed_final_list)
+print(first_index)
+print(too_much_variables)
+print(actual_final_list)
+print(stop_index)
+print(primary_structure)
