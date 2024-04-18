@@ -1,4 +1,4 @@
-standard_input="YOLOAUGFFFUGAUAAFFGG"
+standard_input="YOLOAUGAUGCGAUGCUAGCGUUAGCUAGCUGAUCGAUCGAGACUGAUAAFFGG"
 import sys
 
 #Function
@@ -65,64 +65,64 @@ gly=['GGU','GGC','GGA','GGG']
 for i in range(len(final_list)):
     print(i+1)
     if final_list[i] in phe:
-        final_list[i]=="Phe"
+        final_list[i]="Phe"
    
     elif final_list[i] in leu:
-        final_list[i]=="Leu"
+        final_list[i]="Leu"
    
     elif final_list[i] in ile:
-        final_list[i]=="Ile"
+        final_list[i]="Ile"
    
     elif final_list[i] in met:
-        final_list[i]=="Met"
+        final_list[i]="Met"
    
     elif final_list[i] in val:
-        final_list[i]=="Val"
+        final_list[i]="Val"
    
     elif final_list[i] in ser:
-        final_list[i]=="Ser"
+        final_list[i]="Ser"
    
     elif final_list[i] in pro:
-        final_list[i]=="pro"
+        final_list[i]="pro"
    
     elif final_list[i] in thr:
-        final_list[i]=="Thr"
+        final_list[i]="Thr"
    
     elif final_list[i] in ala:
-        final_list[i]=="Ala"
+        final_list[i]="Ala"
    
     elif final_list[i] in tyr:
-        final_list[i]=="Tyr"
+        final_list[i]="Tyr"
    
     elif final_list[i] in stop:
-        final_list[i]=="Stop"
+        final_list[i]="Stop"
    
     elif final_list[i] in his:
-        final_list[i]=="His"
+        final_list[i]="His"
    
     elif final_list[i] in gln:
-        final_list[i]=="Gln"
+        final_list[i]="Gln"
    
     elif final_list[i] in asn:
-        final_list[i]=="Asn"
+        final_list[i]="Asn"
    
     elif final_list[i] in lys:
-        final_list[i]=="Lys"
+        final_list[i]="Lys"
    
     elif final_list[i] in asp:
-        final_list[i]=="Asp"
+        final_list[i]="Asp"
     
     elif final_list[i] in glu:
-        final_list[i]=="Glu"
+        final_list[i]="Glu"
    
     elif final_list[i] in cys:
-        final_list[i]=="Cys"
+        final_list[i]="Cys"
    
     elif final_list[i] in arg:
-        final_list[i]=="Arg"
+        final_list[i]="Arg"
    
     elif final_list[i] in gly:
-        final_list[i]=="Gly"
+        final_list[i]="Gly"
 
 
 print(final_list)
