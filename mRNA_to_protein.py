@@ -65,7 +65,6 @@ gly=['GGU','GGC','GGA','GGG']
 
 
 for i in range(len(final_listv1)):
-    print(i+1)
     if final_listv1[i] in phe:
         final_listv1[i]="Phe"
    
@@ -141,9 +140,4 @@ primary_structure=actual_final_list[:stop_index]
 
 
 #debugging prints
-print(reversed_final_list)
-print(first_index)
-print(too_much_variables)
-print(actual_final_list)
-print(stop_index)
-print(primary_structure)
+print("-".join(primary_structure))
