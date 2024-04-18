@@ -36,4 +36,9 @@ for i in range(len(mRNA_list)):
         break
 
 final_list=mRNA_list[:ending_index+1]
+
+for i in range(len(final_list)):
+    print(i+1)
+    if 
+
 print(final_list)
