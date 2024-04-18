@@ -4,7 +4,7 @@ import sys
 #Function
 def del_early(string, index):
     return string[index:]
-#f
+
 def mRNA_list_creation(mid):
     return [mid[i:i+3] for i in range(0, len(mid), 3)]
 
