@@ -21,7 +21,7 @@ if mRNA_index == -1:
 
 #Splicing the string
 mRNA_mid=del_early(mRNA, mRNA_index)
-#f
+
 #Creating a list
 mRNA_list=mRNA_list_creation(mRNA_mid)
 
