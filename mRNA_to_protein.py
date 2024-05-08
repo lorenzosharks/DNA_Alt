@@ -1,4 +1,5 @@
-standard_input="YOLOAUGAUGacuagucgagguccgaucgugagucgaugagucgauCGAUGCuaGCGUUAGCUAGCUGAUCGAUCGAGACUGAUAAFFGG"
+#standard_input="YOLOAUGAUGacuagucgagguccgaucgugagucgaugagucgauCGAUGCuaGCGUUAGCUAGCUGAUCGAUCGAGACUGAUAAFFGG"
+standard_input="UAAAUG"
 import sys
 
 #Function
@@ -125,6 +126,8 @@ for i in range(len(final_listv1)):
     elif final_listv1[i] in gly:
         final_listv1[i]="Gly"
 
+if len(final_listv1)==0:
+    print("There is no primary structure.")
 
 reversed_final_list=list(reversed(final_listv1))
 
@@ -137,7 +140,6 @@ actual_final_list=list(reversed(too_much_variables))
 stop_index=actual_final_list.index('Stop')
 
 primary_structure=actual_final_list[:stop_index]
-
 
 #debugging prints
 print("-".join(primary_structure))
