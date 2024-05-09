@@ -128,6 +128,7 @@ for i in range(len(final_listv1)):
 
 if len(final_listv1)==0:
     print("There is no primary structure.")
+    sys.exit()
 
 reversed_final_list=list(reversed(final_listv1))
 
